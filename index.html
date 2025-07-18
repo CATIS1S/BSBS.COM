@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>بسبوس</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 40px;
+      font-size: 24px;
+    }
+
+    img {
+      margin-top: 20px;
+      border: 4px solid #007BFF; /* إطار أزرق حول الصورة */
+      border-radius: 12px;       /* حواف ناعمة للإطار */
+    }
+
+    .btn {
+      margin-top: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>شيخ الذيابه</h2>
+  <img id="myImage" src="cati1.png" alt="cati2.png" width="300">
+  <br>
+  <button class="btn" onclick="toggleImage()">تبديل الصورة</button>
+
+  <script>
+    function toggleImage() {
+      const image = document.getElementById("myImage");
+      const currentSrc = image.src.toLowerCase();
+
+      if (currentSrc.includes("cati1.png")) {
+        image.src = "cati2.png";
+        image.alt = "cati2.png";
+      } else {
+        image.src = "cati1.png";
+        image.alt = "cati1.png";
+      }
+    }
+  </script>
+</body>
+</html>
